@@ -1,16 +1,16 @@
 package helloworld;
 
-public class EarmInMonthSwitch{
+public class EarnInMonthwhile{
 	public static final int parthour=2;
 	public static final int fullhour=1;
 	public static final int EarnPerHour=20;
 
 	public static void main(String[] args) {
-		int Hour=0;
-		int TotalWage=0;
-		int Onedaywage=0;
-		for (int day=0;day<20;day++)
+		int Hour=0, TotalWage=0,Totalemphour=0,TotalWorkingDays=0;
+	
+		while (Totalemphour<=100 && TotalWorkingDays<20)
 		{
+			TotalWorkingDays++;
 			int present =(int)Math.floor((Math.random()*10)%3);
 			switch (present) 
 			{
@@ -23,10 +23,10 @@ public class EarmInMonthSwitch{
 				default:
 					Hour=0;
 			}
-			Onedaywage=Hour+EarnPerHour;
-			TotalWage=TotalWage+Onedaywage;
+			Totalemphour+=Hour;
+			TotalWage=TotalWage+Totalemphour;
 		}
-	System.out.println("Employee Earn in Month mworking 20 days:-"+TotalWage);
+	System.out.println("Employee Earn in Month mworking 20 days:-"+TotalWage*EarnPerHour);
 
 }
 }
